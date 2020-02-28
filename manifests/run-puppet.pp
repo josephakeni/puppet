@@ -6,6 +6,7 @@ file { '/usr/local/bin/run-puppet':
 
 cron { 'run-puppet':
   command => '/usr/local/bin/run-puppet',
+  environment => ['MAILTO=josephakeni@gmail.com', 'PATH=/bin'],
   hour    => '*',
-  minute  => '*/15',
+  minute  => '*/05',
 }
